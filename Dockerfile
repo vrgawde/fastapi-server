@@ -12,7 +12,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Make port 80 available to the world outside this container
-EXPOSE 80
+EXPOSE 8000
 
 # Run app.py when the container launches
-CMD ["python3", "-m","uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80", "--reload"]
+CMD ["python3", "-m","uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
